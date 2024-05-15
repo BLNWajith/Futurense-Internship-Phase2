@@ -23,7 +23,5 @@ select customer_id, customer_name, customer_region from customers where customer
 select product_id, SUM(order_quantity) as total_quantity from order_items where order_date between '2024-01-01' and '2024-03-31' group by product_id
 having sum(order_quantity) > (select avg(order_quantity) from order_items where order_date between '2024-01-01' and '2024-12-31');
 
-
-
-
+SELECT orderNumber, SUM(quantityOrdered * priceEach) AS TotalPrice FROM your_table_name WHERE orderNumber = 10100 GROUP BY orderNumber;
 
